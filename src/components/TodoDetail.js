@@ -39,6 +39,7 @@ const TodoDetail = ({ todo, handleDelete }) => {
             className="w-full p-2 bg-white rounded outline-none"
             value={data.title}
             onChange={handleChange}
+            required
           />
           <button
             className="bg-blue-500 text-white rounded text-sm font-semibold p-2 px-3 ml-1"
