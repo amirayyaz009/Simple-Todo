@@ -33,7 +33,7 @@ const TodoDetail = ({ todo, handleDelete }) => {
   return (
     <>
       {todo.id === data.id && toggle ? (
-        <div className="w-full flex items-center mt-1">
+        <form onSubmit={handleSave} className="w-full flex items-center mt-1">
           <input
             type="text"
             className="w-full p-2 bg-white rounded outline-none"
@@ -42,12 +42,12 @@ const TodoDetail = ({ todo, handleDelete }) => {
             required
           />
           <button
+            type="submit"
             className="bg-blue-500 text-white rounded text-sm font-semibold p-2 px-3 ml-1"
-            onClick={handleSave}
           >
             Save
           </button>
-        </div>
+        </form>
       ) : (
         <div className="w-full flex items-center mt-1">
           <div className="w-full p-2 bg-white rounded">
